@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           inoagent
 @namespace      https://github.com/xapdkop
-@version        0.0.1
+@version        0.0.2
 @description    Убирает лейбл ~врага народа~ иноагента
 @homepageURL    https://github.com/xapdkop/inoagnet
 @updateURL      https://github.com/xapdkop/inoagent/raw/main/inoagent.user.css
@@ -17,13 +17,19 @@
 }
 
 @-moz-document domain('tvrain.ru') {
-    [class^='menu'] {
-        [class$='__foreign-agent-wrapper'] {
+    .menu3 {
+        &__foreign-agent-wrapper {
             display: none !important;
         }
 
+        &__bottom > &__wrap {
+            @media screen and (min-width: 48em) {
+                margin-top: 40px;
+            }
+        }
+
         ~ .wrap {
-            margin-top: -250px;
+            margin-top: -200px;
 
             @media screen and (max-width: 47.99em) {
                 margin-top: 0;
