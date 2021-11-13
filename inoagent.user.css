@@ -1,0 +1,54 @@
+/* ==UserStyle==
+@name           inoagent
+@namespace      https://github.com/xapdkop
+@version        0.0.1
+@description    Убирает лейбл ~врага народа~ иноагента
+@homepageURL    https://github.com/xapdkop/inoagnet
+@updateURL      https://raw.githubusercontent.com/xapdkop/inoagent/main/inoagnet.user.css
+@author         xapdkop (https://github.com/xapdkop)
+@license        MIT
+@preprocessor   less
+==/UserStyle== */
+
+@-moz-document domain('istories.media') {
+    .ForeignAgentBanner {
+        display: none !important;
+    }
+}
+
+@-moz-document domain('tvrain.ru') {
+    [class^='menu'] {
+        [class$='__foreign-agent-wrapper'] {
+            display: none !important;
+        }
+
+        ~ .wrap {
+            margin-top: -250px;
+
+            @media screen and (max-width: 47.99em) {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .document-head__title_foreign_agent {
+        display: none !important;
+    }
+}
+
+@-moz-document domain('meduza.io') {
+    .Banner-root {
+        display: none !important;
+    }
+}
+
+@-moz-document domain("zona.media") {
+    .mz-agent-banner {
+        padding-top: 0;
+
+        &__text,
+        &__link {
+            display: none !important;
+        }
+    }
+}
